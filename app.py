@@ -63,7 +63,7 @@ def short_minify(short_url_key):
         short_url_id=short_url_key).first()
     if sec_msg_var != None:
         times_clicked = int(sec_msg_var.times_clicked)
-        if times_clicked < 2:
+        if times_clicked < 1:
             times_clicked += 1
             sec_msg_var.times_clicked = times_clicked
             db.session.add(sec_msg_var)
