@@ -51,8 +51,8 @@ def shorturl():
                             short_url_id=short_url_id, delete_url_id=delete_url_id)
     db.session.add(sec_record)
     db.session.commit()
-    short_url_id = "http://127.0.0.1:5000/" + short_url_id
-    delete_url_id = "http://127.0.0.1:5000/" + delete_url_id
+    short_url_id = "https://urscrt.herokuapp.com/" + short_url_id
+    delete_url_id = "https://urscrt.herokuapp.com/" + delete_url_id
     return render_template('result.html', short_url=short_url_id, delete_url=delete_url_id)
 
 
