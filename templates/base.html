@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'images/logo.png') }}" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/styles.css') }}" />
+
+    <title>{% block title%} {% endblock %}</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{url_for('index')}}"><img
+                    src="{{ url_for('static', filename = 'images/logo.png') }}" width="30" height="30"
+                    class="d-inline-block align-top" alt="Logo" /><i>&nbsp;</i><span id="logo-font-name">Share a
+                    Secret</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!--End of the Navigation Bar-->
+    <main>{% block main%} {% endblock %}</main>
+
+    <!--Footer-->
+    <footer id="sticky-footer" class="footer py-1 bg-dark text-white-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p>© Copyright 2022 Sheshank Kindalkar</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End of Footer-->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        function copyShortnedUrl() {
+            var copyshortnedText = document.getElementById("shortned_url").innerHTML;
+            navigator.clipboard.writeText(copyshortnedText).then(() => {
+                alert("Copied to clipboard");
+            });
+        }
+
+        function deleteShortnedUrl() {
+            var copyDeleteText = document.getElementById("del_shortned_url").innerText;
+            navigator.clipboard.writeText(copyDeleteText).then(() => {
+                alert("Copied to clipboard");
+            });
+        }
+    </script>
+</body>
+
+</html>

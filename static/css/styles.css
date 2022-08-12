@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+body {
+    background-color: #1B242E;
+    color: #fbb034;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#logo-font-name {
+  font-family: "Reem Kufi", sans-serif;
+}
+
+.sub-head {
+  font-size: 55px;
+  max-width: 100%;
+  text-align: center;
+  font-family: Poppins,sans-serif;
+  padding-top: 10px;
+  font-weight: 900;
+}
+
+.sub-heading-form {
+  font-size: 20px;
+  max-width: 100%;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sub-head-desc{
+text-align: right;
+font-family: Poppins,sans-serif;
+padding-right: 20%;
+font-size: 24px;
+
+
+}
+.main-form {
+    background-color: #f5df2e;
+    background-image: linear-gradient(315deg, #f5df2e 0%, #fbb034 74%);
+  color: #0C2342;
+  margin: 3%;
+  padding: 5% 5%;
+  border-radius: 15px;
+  max-width: 96%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.main-form-opp{
+  background-color: #f5df2e;
+  background-image: linear-gradient(-315deg, #f5df2e 0%, #ffdd00 74%);
+color: #0C2342;
+margin: 3%;
+padding: 5% 5%;
+border-radius: 15px;
+max-width: 96%;
+font-family: "Montserrat", sans-serif;
+font-weight: 600;
+}
+
+#long_url {
+  width: 95%;
+  border-radius: 12px;
+  background-color: whitesmoke;
+}
+
+.mtmsubbtn {
+  padding: 10px 20%;
+  background-color: #485461;
+background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.long_url_output{
+    padding: 15px 10px;
+    border-color: #f5df2e;
+    width: 95%;
+    border-radius: 12px;
+    background-color: whitesmoke;
+
+}
+
+
+footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}

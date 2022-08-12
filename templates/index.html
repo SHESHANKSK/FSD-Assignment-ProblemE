@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {%block title%} Share a Secret: Safe and Encrypted {%
+endblock %} {% block main %}
+
+<div class="container-span">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="sub-head">Share a Secret</p>
+            <p class="sub-head-desc">Single Click & the Link Self-Destroys...</p>
+            <form action="/secretmsg" method="post" class="main-form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="radio" id="textmsg" name="message_type" value="1" required>
+                            <label for="1" class="sub-heading-form">Text</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="radio" id="urlmsg" name="message_type" value="2" required>
+                            <label for="2" class="sub-heading-form">URL</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="radio" id="neogrammsg" name="message_type" value="3" required>
+                            <label for="3" class="sub-heading-form">NeoGRAM</label><br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <textarea id="long_url" name="sec_msg" rows="5" required placeholder="Secret Message Here"
+                    required></textarea><br />
+
+                <div style="text-align: center">
+                    <input type="submit" value="Get Secret Link" class="mtmsubbtn" />
+                </div>
+            </form>
+        </div>
+
+        {% endblock %}
+    </div>
+</div>
